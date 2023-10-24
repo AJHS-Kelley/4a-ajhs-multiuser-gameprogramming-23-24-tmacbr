@@ -27,11 +27,32 @@ namespace MethodsParameters
         }
         
         
+        static void MakePancakes(int num) 
+        { 
+            for (int i = 0; i < num; i++)
+            {
+                Console.WriteLine("one golden, Fluffy pancake coming up!\n");
+            }
+
+        }
+        
+        static void MakeEggs(int num, string style)
+        {   
+            Console.WriteLine("you have orrdered" + num + "eggs cooked + style + ".\n");
+        }
+        
+        
+        
+        
         
         static void Main(string[] args)
         {
-            myMethod();
-            DoubleUp();
+            //myMethod();
+            //DoubleUp();
+            //MakePancakes();
+            MakeEgges(10."sunny side up");
+            
+            
         }
     }
 }
