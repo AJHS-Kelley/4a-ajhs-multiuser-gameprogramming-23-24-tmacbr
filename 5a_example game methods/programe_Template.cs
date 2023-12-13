@@ -5,7 +5,7 @@ namespace UPDATEFOREACHPROGRAM
     class UPDATEFOREACHPROGRAM
 
     {
-        static void MethodOne;()
+        static void MethodOne()
         
             int playerRandomNum = random.Next(1,7);
 
@@ -40,4 +40,4 @@ namespace UPDATEFOREACHPROGRAM
     }
 }
 
-// Code Review by Ryan Kelley
+// Code Review by Ryan Kelley`
