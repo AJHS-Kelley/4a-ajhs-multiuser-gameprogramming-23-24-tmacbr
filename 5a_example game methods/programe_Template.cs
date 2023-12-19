@@ -9,7 +9,7 @@ namespace UPDATEFOREACHPROGRAM
         static int DiceRoll(int numRolls, int maxRoll)
         {
             Random random = new Random();
-            int playerRandomNum = random.Next(1,7);
+            int playerRandomNum = 0;
             
             string text = "hello welcome to dice roll";
             Console.WriteLine(text);
@@ -35,11 +35,15 @@ namespace UPDATEFOREACHPROGRAM
             // you made it to the next level!!
         }
 
-        static int MethodThree(int amount)
+        static int DiceChances(int amount)
         {
            
-            int wins = 0;
-            int losses = 0;
+            float wins = 0;
+            float losses = 0;
+            string[] goodLuck = {"good try", "better luck next time", "keep going"};
+            //string[] hello = {"hi", "sup", "blah"};
+            
+            //Console.WriteLine(hello[0]);
             
             for (int i = 0; i < amount; i++)
             {
@@ -55,27 +59,35 @@ namespace UPDATEFOREACHPROGRAM
                     Console.WriteLine(" you lose, go home!!");
                     losses++;
                     
+                    if (roll == 4)
+                    {
+                        Random random = new Random();
+                        int playerRandomNum = random.Next(1,4);
+                        Console.WriteLine(goodLuck[playerRandomNum]);
+                    }
                 }
             }
             Console.WriteLine("wins: " + wins);
             Console.WriteLine("losses: " + losses);
             Console.WriteLine("amount: " + amount);
-            double winRatio = 0.0;
-            double lossRatio = 0.0;
-            winRatio = 100;
-            lossRatio = (losses/amount) * 100;
+            float winRatio = 0.0F;
+            float lossRatio = 0.0F;
+            
+        
+            lossRatio = (float)(losses /amount) *  100; 
+            winRatio = (float)(wins /amount) *  100; 
             Console.WriteLine(winRatio);
             Console.WriteLine(lossRatio);
             Console.WriteLine(winRatio + "% - " + lossRatio + "%");
             
-            return wins;
+            return 2;
             // wins divided by losses to give you your win per
         }
         
         
         static void Main(string[] args)
         {
-            MethodThree(10);
+            DiceChances(100);
             // DiceRoll(6,8);
         }
     }
